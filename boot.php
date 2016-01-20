@@ -1760,7 +1760,7 @@ function proc_run($cmd){
 		proc_close(proc_open($cmd, array(), $foo));
 	}
 	else
-		proc_close(proc_open($cmdline ." &", array(), $foo));
+		exec($cmdline . ' > /dev/null &');
 }
 
 /**
